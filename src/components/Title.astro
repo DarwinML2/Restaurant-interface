@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string
+  size?: 'xl' | 'md'
+  tag?: string
+}
+const { title, size = 'xl', tag = 'h1' } = Astro.props
+const sizeVariant = {
+  xl: 'text-5xl',
+  md: 'text-3xl'
+}
+
+const Tag = tag
+---
+
+<Tag class=`font-bold text-center text-orange-950 ${sizeVariant[size]}`>
+  {title}
+</Tag>
