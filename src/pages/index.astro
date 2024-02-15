@@ -1,8 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/Nav.astro'
+import Title from '../components/Title.astro'
 ---
 
-<Layout title="Free Pizza">
-	<Nav/>
+<Layout title='Free Pizza'>
+  <Nav />
+  <Title title='Made by Napoletans.' />
+  <Title
+    title='Loved by all.'
+    size='md'
+    tag='h2'
+  />
 </Layout>
