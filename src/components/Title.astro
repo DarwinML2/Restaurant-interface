@@ -2,7 +2,7 @@
 interface Props {
   title: string
   size?: 'xl' | 'md'
-  tag?: string
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 const { title, size = 'xl', tag = 'h1' } = Astro.props
 const sizeVariant = {
@@ -13,6 +13,6 @@ const sizeVariant = {
 const Tag = tag
 ---
 
-<Tag class=`font-bold text-center text-orange-950 ${sizeVariant[size]}`>
+<Tag class:list={['font-bold text-center text-orange-950', sizeVariant[size]]}>
   {title}
 </Tag>
