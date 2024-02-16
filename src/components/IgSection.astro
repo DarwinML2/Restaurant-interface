@@ -1,0 +1,45 @@
+---
+import Title from '../components/Title.astro'
+import Button from '../components/Button.astro'
+import { Image } from 'astro:assets'
+import imgIg1 from '../images/img-ig-1.png'
+import imgIg2 from '../images/img-ig-2.png'
+import imgIg3 from '../images/img-ig-3.png'
+import imgIg4 from '../images/img-ig-4.png'
+import IconArrowRightUp from '../icons/IconArrowRightUp.astro'
+---
+
+<section class='max-w-4xl mx-auto py-5'>
+  <div class='flex justify-between'>
+    <Title title='Tag @lapizzapopolare!' />
+    <Button
+      color='secondary'
+      rounded
+    >
+      <span class='text-xl'>Insta</span>
+      <IconArrowRightUp class='size-4 ml-2' />
+    </Button>
+  </div>
+  <div class='flex justify-around gap-3 my-5'>
+    <Image
+      alt='Instagram'
+      src={imgIg1}
+      width={200}
+    />
+    <Image
+      alt='Instagram'
+      src={imgIg2}
+      width={200}
+    />
+    <Image
+      alt='Instagram'
+      src={imgIg3}
+      width={200}
+    />
+    <Image
+      alt='Instagram'
+      src={imgIg4}
+      width={200}
+    />
+  </div>
+</section>
