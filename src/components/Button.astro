@@ -2,18 +2,22 @@
 interface Props {
   title: string
   color?: 'primary' | 'secondary'
+  rounded?: boolean
 }
-const { title, color = 'primary' } = Astro.props
+const { title, color = 'primary', rounded = false } = Astro.props
 const variantColor = {
   primary: 'bg-orange-950 text-white',
   secondary:
     'bg-white text-orange-950 border border-orange-950 hover:text-white'
 }
+
+const boxSize = rounded ? 'rounded-full py-1 px-2' : 'rounded-lg py-2 px-8'
 ---
 
 <button
   class:list={[
-    'py-2 px-8 rounded-lg font-bold text-sm hover:bg-orange-900 hover:scale-105 transition ease-in duration-300',
-    variantColor[color]
+    'font-bold text-sm hover:bg-orange-900 hover:scale-105 transition ease-in duration-300',
+    variantColor[color],
+    boxSize
   ]}>{title}</button
 >
