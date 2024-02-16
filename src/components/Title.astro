@@ -1,11 +1,12 @@
 ---
 interface Props {
   title: string
-  size?: 'xl' | 'md'
+  size?: 'xl' | 'md' | 'xs'
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 const { title, size = 'xl', tag = 'h1' } = Astro.props
 const sizeVariant = {
+  xs: 'text-xs',
   xl: 'text-5xl',
   md: 'text-3xl'
 }
