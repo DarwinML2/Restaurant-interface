@@ -3,8 +3,9 @@ interface Props {
   title: string
   size?: 'xl' | 'md' | 'xs'
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  class?: string
 }
-const { title, size = 'xl', tag = 'h1' } = Astro.props
+const { title, size = 'xl', tag = 'h1', class: className } = Astro.props
 const sizeVariant = {
   xs: 'text-xs',
   xl: 'text-5xl',
@@ -14,6 +15,6 @@ const sizeVariant = {
 const Tag = tag
 ---
 
-<Tag class:list={['font-bold text-center text-orange-950', sizeVariant[size]]}>
+<Tag class:list={['font-bold text-orange-950', sizeVariant[size], className]}>
   {title}
 </Tag>
