@@ -1,2 +1,19 @@
+---
+interface Props {
+  title: string
+  color?: 'primary' | 'secondary'
+}
+const { title, color = 'primary' } = Astro.props
+const variantColor = {
+  primary: 'bg-orange-950 text-white',
+  secondary:
+    'bg-white text-orange-950 border border-orange-950 hover:text-white'
+}
+---
 
-<button class="bg-orange-950 text-white py-2 px-8 rounded-lg font-bold text-sm hover:bg-orange-900 hover:scale-105 transition ease-in duration-300">Book a table</button>
+<button
+  class:list={[
+    'py-2 px-8 rounded-lg font-bold text-sm hover:bg-orange-900 hover:scale-105 transition ease-in duration-300',
+    variantColor[color]
+  ]}>{title}</button
+>
