@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets'
+import imgEvent1 from '../images/image-events-1.png'
+import imgEvent2 from '../images/image-events-2.png'
+import imgEvent3 from '../images/image-events-3.png'
+import imgEvent4 from '../images/image-events-4.png'
+import Title from '../components/Title.astro'
+---
+
+<section class='max-w-4xl mx-auto py-5'>
+  <div>
+    <Title
+      title='Events'
+      size='md'
+    />
+  </div>
+  <div class='my-5 grid grid-cols-2 gap-5'>
+    <Image
+      class='hover:bg-orange-300 hover:scale-105 transition ease-in duration-300'
+      alt='Event 1'
+      src={imgEvent1}
+    />
+    <Image
+      class='hover:bg-orange-300 hover:scale-105 transition ease-in duration-300'
+      alt='Event 2'
+      src={imgEvent2}
+    />
+    <Image
+      class='hover:bg-orange-300 hover:scale-105 transition ease-in duration-300'
+      alt='Event 3'
+      src={imgEvent3}
+    />
+    <Image
+      class='hover:bg-orange-300 hover:scale-105 transition ease-in duration-300'
+      alt='Event 4'
+      src={imgEvent4}
+    />
+  </div>
+</section>
