@@ -1,0 +1,33 @@
+---
+import Button from './Button.astro'
+import Title from '../components/Title.astro'
+import frontImage from '../images/Group-1.png'
+import { Image } from 'astro:assets'
+---
+
+<header class='grid gap-y-10 p-4 bg-gradient-to-b from-orange-600/40'>
+  <div class='flex justify-between'>
+    <p class='uppercase font-bold'>la pizza popolare</p>
+    <nav class='space-x-6'>
+      <a href='#'>Menu</a>
+      <a href='#'>Who we are</a>
+      <a href='#'>Events</a>
+      <a href='#'>Contacts</a>
+    </nav>
+    <Button />
+  </div>
+  <div>
+    <Title title='Made by Napoletans.' />
+    <Title
+      title='Loved by all.'
+      size='md'
+      tag='h2'
+    />
+    <Image
+      width={900}
+      class='mx-auto'
+      src={frontImage}
+      alt='chesee pizza.'
+    />
+  </div>
+</header>
