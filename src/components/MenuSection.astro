@@ -1,14 +1,17 @@
 ---
 import Title from '../components/Title.astro'
 import Button from '../components/Button.astro'
+import { Image } from 'astro:assets'
+import imgMenu from '../images/img-menu.png'
+import { pizzas } from '../data/pizzas.js'
 ---
 
-<section>
+<section class='max-w-4xl mx-auto'>
   <Title
     title='Menu'
     tag='h2'
   />
-  <p class='text-center my-10'>
+  <p class='text-center my-10 text-lg'>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. At nostrum
     accusantium aliquid praesentium corrupti dolores ullam iure dicta obcaecati
     sapiente temporibus qui, iusto blanditiis modi libero vero. Id, illo
@@ -35,4 +38,28 @@ import Button from '../components/Button.astro'
       />
     </li>
   </ul>
+  <div class='grid grid-cols-4 gap-2'>
+    {
+      pizzas.map((pizza) => (
+        <article class='text-center'>
+          <Image
+            src={imgMenu}
+            alt='pizza'
+          />
+          <Title
+            title={pizza.label}
+            size='xs'
+          />
+          <span class='text-orange-950 font-bold'>${pizza.price}</span>
+        </article>
+      ))
+    }
+  </div>
+  <div class='flex justify-end'>
+    <Button
+      title='→'
+      color='secondary'
+      rounded
+    />
+  </div>
 </section>
