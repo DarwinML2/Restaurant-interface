@@ -8,20 +8,22 @@ import imgTeam4 from '../images/Image-ourteam-4.png'
 ---
 
 <section
-  class='max-w-4xl mx-auto py-5 bg-orange-100/60 bg-gradient-to-t from-orange-600/40'
+  class='max-w-4xl mx-auto p-5 bg-orange-100/60 bg-gradient-to-t from-orange-600/40'
 >
-  <div>
+  <div class='flex justify-between p-1'>
     <Title
       title='Our team'
       size='md'
     />
-    <p class='text-right'>
+    <p>
       In velit auctor in. Id pellentesque facilisis at lectus sed in sit tellus
       mauris
     </p>
   </div>
-  <div class='flex justify-center gap-2 my-10'>
-    <article>
+  <div class='grid grid-cols-2 lg:grid-cols-4'>
+    <article
+      class='text-center flex flex-col justify-center items-center gap-y-1'
+    >
       <Image
         alt='Team1'
         src={imgTeam1}
@@ -37,61 +39,76 @@ import imgTeam4 from '../images/Image-ourteam-4.png'
         tag='h4'
         size='xs'
       />
-      <p class='text-center w-28'>
+      <p class='text-pretty text-sm'>
         In velit auctor in. Id pellentesque facilisis at lectus sed in sit
         tellus mauris
       </p>
     </article>
-    <article>
+    <article
+      class='text-center flex flex-col justify-center items-center gap-y-1'
+    >
       <Image
         alt='Team2'
         src={imgTeam2}
         width={200}
       />
       <Title
-        title='Team'
+        title='Bryan Maohado'
         size='sm'
       />
       <Title
-        title='Position'
+        title='Chef'
         tag='h4'
         size='xs'
       />
-      <p class='text-xs'>Description</p>
+      <p class='text-pretty text-sm'>
+        Duis sed ut dolor viverra porttitor semper et faucibus facillis. Hac
+        maecenas thoncus.
+      </p>
     </article>
-    <article>
+    <article
+      class='text-center flex flex-col justify-center items-center gap-y-1'
+    >
       <Image
         alt='Team3'
         src={imgTeam3}
         width={200}
       />
       <Title
-        title='Team'
+        title='Adam Joseph'
         size='sm'
       />
       <Title
-        title='Position'
+        title='Chef'
         tag='h4'
         size='xs'
       />
-      <p class='text-xs'>Description</p>
+      <p class='text-pretty text-sm'>
+        Faucibus sed vitae dui justo duis in. Egestas ipsum ut a elementum at
+        laoreet at quam vitae.
+      </p>
     </article>
-    <article>
+    <article
+      class='text-center flex flex-col justify-center items-center gap-y-1'
+    >
       <Image
         alt='Team4'
         src={imgTeam4}
         width={200}
       />
       <Title
-        title='Team'
+        title='Pat Desque'
         size='sm'
       />
       <Title
-        title='Position'
+        title='Chef'
         tag='h4'
         size='xs'
       />
-      <p class='text-xs'>Description</p>
+      <p class='text-pretty text-sm'>
+        Molestie viverra mattis nisl vitae orci feugiat in. Aliquet quis orci
+        turpis aliquet.
+      </p>
     </article>
   </div>
 </section>
